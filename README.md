@@ -41,59 +41,6 @@ File `docker-compose.yml` membuat tiga service utama:
 | **next** | 3000 | Menjalankan Next.js frontend |
 | **db** | 3306 | MySQL database |
 
-```yaml
-services:
-  laravel:
-    build:
-      context: ./laravel/notes-be
-    container_name: notes-laravel
-    restart: unless-stopped
-    working_dir: /var/www
-    volumes:
-      - ./laravel/notes-be:/var/www
-    ports:
-      - "8000:8000"
-    environment:
-      - APP_ENV=local
-      - APP_DEBUG=true
-      - APP_KEY=
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_DATABASE=notes
-      - DB_USERNAME=root
-      - DB_PASSWORD=root
-    depends_on:
-      - db
-    command: bash -c "php artisan key:generate && php artisan migrate && php artisan serve --host=0.0.0.0 --port=8000"
-
-  next:
-    build:
-      context: ./next/notes-fe
-    container_name: notes-next
-    restart: unless-stopped
-    working_dir: /app
-    ports:
-      - "3000:3000"
-    environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:8000
-    depends_on:
-      - laravel
-
-  db:
-    image: mysql:8.0
-    container_name: notes-db
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: notes
-    ports:
-      - "3306:3306"
-    volumes:
-      - db_data:/var/lib/mysql
-
-volumes:
-  db_data:
-
 ## 🚀 Cara Menjalankan Proyek
 
 ### 1️⃣ Persyaratan
@@ -106,6 +53,8 @@ Pastikan kamu sudah menginstal:
 ```bash
 git clone https://github.com/username/notes.git
 cd notes
+
+---
 
 ### 3️⃣ Jalankan Docker Compose
 ```bash
