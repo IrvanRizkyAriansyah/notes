@@ -19,14 +19,14 @@ Tujuannya adalah untuk memberikan contoh arsitektur modern berbasis **microservi
 
 ## 📁 Struktur Proyek
 notes/
-├── laravel/
-│ └── notes-be/ # Source code backend (Laravel)
-│
-├── next/
-│ └── notes-fe/ # Source code frontend (Next.js)
-│
-├── docker-compose.yml # Docker orchestration file
-└── README.md # Dokumentasi proyek
+    laravel/
+    notes-be/ # Source code backend (Laravel)
+
+    next/
+    notes-fe/ # Source code frontend (Next.js)
+
+    docker-compose.yml # Docker orchestration file
+    README.md # Dokumentasi proyek
 
 
 ---
