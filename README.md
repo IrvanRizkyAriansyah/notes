@@ -53,19 +53,22 @@ Pastikan kamu sudah menginstal:
 ```bash
 git clone https://github.com/username/notes.git
 cd notes
-
----
+```
 
 ### 3️⃣ Jalankan Docker Compose
 ```bash
 docker compose up --build
-
-Perintah ini akan:
-
-Membangun image untuk Laravel, Next.js, dan MySQL
-Menjalankan semua container
-Menjalankan migrasi database otomatis
 ```
+
+---
+
+### Perintah ini akan:
+
+* Membangun image untuk Laravel, Next.js, dan MySQL
+* Menjalankan semua container
+* Menjalankan migrasi database otomatis
+
+---
 
 ### 4️⃣ Akses Aplikasi
 
@@ -75,15 +78,17 @@ Menjalankan migrasi database otomatis
 | **Backend API (Laravel)** | [http://localhost:8000](http://localhost:8000) |
 | **Database (MySQL)** | `localhost:3306` (user: `root`, password: `root`) |
 
-###🧩 Perintah Tambahan
+---
+
+### 🧩 Perintah Tambahan
 Masuk ke Container Laravel
-docker exec -it notes-laravel bash
+* docker exec -it notes-laravel bash
 
 Jalankan Migrasi Manual (jika diperlukan)
-php artisan migrate
+* php artisan migrate
 
 Hapus Cache Build Docker
-docker builder prune -a
+* docker builder prune -a
 
 Hentikan Semua Container
-docker compose down
+* docker compose down
