@@ -1,0 +1,41 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+next/notes-fe/node_modules
+next/notes-fe/.pnp
+next/notes-fe/.pnp.*
+next/notes-fe/.yarn/*
+!next/notes-fe/.yarn/patches
+!next/notes-fe/.yarn/plugins
+!next/notes-fe/.yarn/releases
+!next/notes-fe/.yarn/versions
+
+# testing
+next/notes-fe/coverage
+
+# next.js
+next/notes-fe/.next/
+next/notes-fe/out/
+
+# production
+next/notes-fe/build
+
+# misc
+next/notes-fe/.DS_Store
+next/notes-fe/*.pem
+
+# debug
+next/notes-fe/npm-debug.log*
+next/notes-fe/yarn-debug.log*
+next/notes-fe/yarn-error.log*
+next/notes-fe/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+next/notes-fe/.env*
+
+# vercel
+next/notes-fe/.vercel
+
+# typescript
+next/notes-fe/*.tsbuildinfo
+next/notes-fe/next-env.d.ts
