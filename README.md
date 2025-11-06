@@ -10,8 +10,8 @@ Tujuannya adalah untuk memberikan contoh arsitektur modern berbasis **microservi
 
 ## 🧱 Teknologi yang Digunakan
 
-* ⚙️ **Backend:** [Laravel 10](https://laravel.com/)
-* 🖥️ **Frontend:** [Next.js 14+](https://nextjs.org/) + [TailwindCSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
+* ⚙️ **Backend:** [Laravel 12](https://laravel.com/)
+* 🖥️ **Frontend:** [Next.js 16+](https://nextjs.org/) + [TailwindCSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
 * 🗄️ **Database:** [MySQL 8](https://www.mysql.com/)
 * 🐳 **Containerization:** [Docker & Docker Compose](https://www.docker.com/)
 
@@ -65,6 +65,7 @@ Perintah ini akan:
 Membangun image untuk Laravel, Next.js, dan MySQL
 Menjalankan semua container
 Menjalankan migrasi database otomatis
+```
 
 ### 4️⃣ Akses Aplikasi
 
